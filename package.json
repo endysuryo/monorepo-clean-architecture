@@ -1,0 +1,62 @@
+{
+  "name": "monorepo-clean-architecture",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "storybook": "yarn workspace ui run storybook"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "cypress": "^9.3.1",
+    "esbuild": "^0.14.14",
+    "esbuild-jest": "^0.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1",
+    "react-test-renderer": "^17.0.2",
+    "redux-mock-store": "^1.5.4",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "lint-staged": {
+    "apps/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "packages/ui/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "yarn@1.22.10"
+}

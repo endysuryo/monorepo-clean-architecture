@@ -1,0 +1,47 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "module": "dist/components.bundle.min.js",
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "next",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
+    "@storybook/react": "^6.4.18",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "config": "*",
+    "cssnano": "^5.0.17",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.2.1",
+    "tailwindcss": "^3.0.17",
+    "tsconfig": "*",
+    "typescript": "^4.5.3",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}

@@ -1,0 +1,8 @@
+// this file purpose to cypress with typescript compiler
+{
+  "extends": "./packages/tsconfig/base.json",
+  "compilerOptions": {
+    "isolatedModules": false
+  },
+  "exclude": ["apps", "packages", "node_modules"]
+}

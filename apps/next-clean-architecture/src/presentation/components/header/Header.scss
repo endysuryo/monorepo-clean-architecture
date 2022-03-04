@@ -1,0 +1,16 @@
+.header {
+  width: 100vw;
+  height: 9vh;
+  background: var(--color-primary);
+
+  .header-section {
+    align-items: center;
+    height: 100%;
+
+    .logo {
+      width: auto;
+      height: 40px;
+      object-fit: cover;
+    }
+  }
+}
